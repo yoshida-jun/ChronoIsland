@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  qqq
+//  ChronoIsland
 //
 //  Created by jun on 2026/03/12.
 //

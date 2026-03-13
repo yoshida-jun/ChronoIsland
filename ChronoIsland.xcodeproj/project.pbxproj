@@ -37,7 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BF8501102F61BFCB008CDEBB /* qqq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qqq.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF8501102F61BFCB008CDEBB /* ChronoIsland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChronoIsland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8501242F61CC6A008CDEBB /* ClockWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClockWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8501262F61CC6A008CDEBB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		BF8501282F61CC6B008CDEBB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -54,9 +54,9 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		BF8501122F61BFCB008CDEBB /* qqq */ = {
+		BF8501122F61BFCB008CDEBB /* ChronoIsland */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = qqq;
+			path = ChronoIsland;
 			sourceTree = "<group>";
 		};
 		BF85012A2F61CC6B008CDEBB /* ClockWidget */ = {
@@ -92,7 +92,7 @@
 		BF8501072F61BFCB008CDEBB = {
 			isa = PBXGroup;
 			children = (
-				BF8501122F61BFCB008CDEBB /* qqq */,
+				BF8501122F61BFCB008CDEBB /* ChronoIsland */,
 				BF85012A2F61CC6B008CDEBB /* ClockWidget */,
 				BF8501252F61CC6A008CDEBB /* Frameworks */,
 				BF8501112F61BFCB008CDEBB /* Products */,
@@ -102,7 +102,7 @@
 		BF8501112F61BFCB008CDEBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF8501102F61BFCB008CDEBB /* qqq.app */,
+				BF8501102F61BFCB008CDEBB /* ChronoIsland.app */,
 				BF8501242F61CC6A008CDEBB /* ClockWidgetExtension.appex */,
 			);
 			name = Products;
@@ -120,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF85010F2F61BFCB008CDEBB /* qqq */ = {
+		BF85010F2F61BFCB008CDEBB /* ChronoIsland */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF85011B2F61BFCD008CDEBB /* Build configuration list for PBXNativeTarget "qqq" */;
+			buildConfigurationList = BF85011B2F61BFCD008CDEBB /* Build configuration list for PBXNativeTarget "ChronoIsland" */;
 			buildPhases = (
 				BF85010C2F61BFCB008CDEBB /* Sources */,
 				BF85010D2F61BFCB008CDEBB /* Frameworks */,
@@ -135,13 +135,13 @@
 				BF8501392F61CC6D008CDEBB /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				BF8501122F61BFCB008CDEBB /* qqq */,
+				BF8501122F61BFCB008CDEBB /* ChronoIsland */,
 			);
-			name = qqq;
+			name = ChronoIsland;
 			packageProductDependencies = (
 			);
-			productName = qqq;
-			productReference = BF8501102F61BFCB008CDEBB /* qqq.app */;
+			productName = ChronoIsland;
+			productReference = BF8501102F61BFCB008CDEBB /* ChronoIsland.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BF8501232F61CC6A008CDEBB /* ClockWidgetExtension */ = {
@@ -184,7 +184,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF85010B2F61BFCB008CDEBB /* Build configuration list for PBXProject "qqq" */;
+			buildConfigurationList = BF85010B2F61BFCB008CDEBB /* Build configuration list for PBXProject "ChronoIsland" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -198,7 +198,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF85010F2F61BFCB008CDEBB /* qqq */,
+				BF85010F2F61BFCB008CDEBB /* ChronoIsland */,
 				BF8501232F61CC6A008CDEBB /* ClockWidgetExtension */,
 			);
 		};
@@ -497,7 +497,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF85010B2F61BFCB008CDEBB /* Build configuration list for PBXProject "qqq" */ = {
+		BF85010B2F61BFCB008CDEBB /* Build configuration list for PBXProject "ChronoIsland" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF8501192F61BFCD008CDEBB /* Debug */,
@@ -506,7 +506,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF85011B2F61BFCD008CDEBB /* Build configuration list for PBXNativeTarget "qqq" */ = {
+		BF85011B2F61BFCD008CDEBB /* Build configuration list for PBXNativeTarget "ChronoIsland" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF85011C2F61BFCD008CDEBB /* Debug */,

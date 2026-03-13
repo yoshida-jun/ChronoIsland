@@ -7,15 +7,6 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
-struct ClockActivityAttributes: ActivityAttributes {
-    static let activityType = "uk.jkjk.qqq.clock"
-
-    struct ContentState: Codable, Hashable {
-        var date: Date
-        var hourStart: Date  // 現在の時間の開始時刻（分:秒タイマー基準）
-    }
-}
-
 struct ClockWidgetLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: ClockActivityAttributes.self) { context in

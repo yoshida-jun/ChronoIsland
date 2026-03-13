@@ -1,13 +1,13 @@
 //
 //  ClockActivityAttributes.swift
-//  qqq
+//  ChronoIsland
 //
 
 import ActivityKit
 import Foundation
 
 struct ClockActivityAttributes: ActivityAttributes {
-    static let activityType = "uk.jkjk.qqq.clock"
+    static let activityType = "uk.jkjk.ChronoIsland.clock"
 
     struct ContentState: Codable, Hashable {
         var date: Date

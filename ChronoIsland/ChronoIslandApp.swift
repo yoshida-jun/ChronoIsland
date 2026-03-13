@@ -1,6 +1,6 @@
 //
-//  qqqApp.swift
-//  qqq
+//  ChronoIslandApp.swift
+//  ChronoIsland
 //
 //  Created by jun on 2026/03/12.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct qqqApp: App {
+struct ChronoIslandApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

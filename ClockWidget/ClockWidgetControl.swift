@@ -10,7 +10,7 @@ import SwiftUI
 import WidgetKit
 
 struct ClockWidgetControl: ControlWidget {
-    static let kind: String = "uk.jkjk.qqq.ClockWidget"
+    static let kind: String = "uk.jkjk.ChronoIsland.ClockWidget"
 
     var body: some ControlWidgetConfiguration {
         AppIntentControlConfiguration(
