@@ -36,11 +36,6 @@ struct ContentView: View {
                         ))
                 }
 
-                Text(debugMessage)
-                    .font(.system(size: 11, design: .monospaced))
-                    .foregroundColor(.yellow.opacity(0.8))
-                    .padding(.horizontal, 12)
-
                 Button(action: {
                     withAnimation(.easeInOut(duration: 0.4)) {
                         showDigital.toggle()
@@ -91,7 +86,7 @@ struct ContentView: View {
     }
 
     private func updateLiveActivity() {
-        // 毎時更新（hourStartが変わるタイミングのみ）
+        // 毎時更新（hourStartが変わるタイミング）
         let cal = Calendar.current
         guard cal.component(.minute, from: currentTime) == 0,
               cal.component(.second, from: currentTime) == 0 else { return }
@@ -119,20 +114,36 @@ struct DigitalClockView: View {
     private var dateString: String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ja_JP")
-        formatter.dateFormat = "yyyy年M月d日(E)"
+        formatter.dateFormat = "yy年M月d日(E)"
+        return formatter.string(from: time)
+    }
+
+    private var warekiString: String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ja_JP")
+        formatter.calendar = Calendar(identifier: .japanese)
+        formatter.dateFormat = "GGyy年"
         return formatter.string(from: time)
     }
 
     var body: some View {
         VStack(spacing: 12) {
             Text(timeString)
-                .font(.system(size: 72, weight: .ultraLight, design: .monospaced))
+                .font(.system(size: 72, weight: .bold, design: .monospaced))
                 .foregroundColor(.white)
                 .monospacedDigit()
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
 
             Text(dateString)
-                .font(.system(size: 18, weight: .light))
-                .foregroundColor(.white.opacity(0.6))
+                .font(.system(size: 72, weight: .bold))
+                .foregroundColor(.white)
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
+
+            Text(warekiString)
+                .font(.system(size: 36, weight: .bold))
+                .foregroundColor(.white)
         }
     }
 }

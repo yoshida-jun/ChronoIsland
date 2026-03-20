@@ -11,15 +11,23 @@ struct ClockWidgetLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: ClockActivityAttributes.self) { context in
             // ロック画面 / バナー表示
-            HStack(spacing: 16) {
-                Text(context.state.date, format: .dateTime.month(.twoDigits).day(.twoDigits))
+            HStack(spacing: 12) {
+                Text(context.state.date, format: .dateTime.year(.twoDigits).month(.twoDigits).day(.twoDigits))
                     .font(.system(size: 20, weight: .bold))
                     .foregroundColor(.white)
                 Spacer()
-                Text(context.state.hourStart, style: .timer)
-                    .font(.system(size: 20, weight: .bold, design: .monospaced))
-                    .foregroundColor(.white.opacity(0.8))
-                    .monospacedDigit()
+                HStack(spacing: 0) {
+                    Text(context.state.hourStart, format: .dateTime.hour(.twoDigits(amPM: .omitted)))
+                        .font(.system(size: 20, weight: .bold, design: .monospaced))
+                        .foregroundColor(.white.opacity(0.8))
+                    Text(":")
+                        .font(.system(size: 20, weight: .bold, design: .monospaced))
+                        .foregroundColor(.white.opacity(0.8))
+                    Text(timerInterval: context.state.hourStart...context.state.hourStart.addingTimeInterval(3600), countsDown: false)
+                        .font(.system(size: 20, weight: .bold, design: .monospaced))
+                        .foregroundColor(.white.opacity(0.8))
+                        .monospacedDigit()
+                }
             }
             .padding(16)
             .background(Color.black)
@@ -32,21 +40,37 @@ struct ClockWidgetLiveActivity: Widget {
                         .foregroundColor(.white)
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text(context.state.hourStart, style: .timer)
-                        .font(.system(size: 16, weight: .bold, design: .monospaced))
-                        .foregroundColor(.white.opacity(0.8))
-                        .monospacedDigit()
+                    HStack(spacing: 0) {
+                        Text(context.state.hourStart, format: .dateTime.hour(.twoDigits(amPM: .omitted)))
+                            .font(.system(size: 16, weight: .bold, design: .monospaced))
+                            .foregroundColor(.white.opacity(0.8))
+                        Text(":")
+                            .font(.system(size: 16, weight: .bold, design: .monospaced))
+                            .foregroundColor(.white.opacity(0.8))
+                        Text(timerInterval: context.state.hourStart...context.state.hourStart.addingTimeInterval(3600), countsDown: false)
+                            .font(.system(size: 16, weight: .bold, design: .monospaced))
+                            .foregroundColor(.white.opacity(0.8))
+                            .monospacedDigit()
+                    }
                 }
             } compactLeading: {
                 Text(context.state.date, format: .dateTime.month(.twoDigits).day(.twoDigits))
                     .font(.system(size: 12, weight: .bold, design: .monospaced))
                     .foregroundColor(.white)
             } compactTrailing: {
-                Text(context.state.hourStart, style: .timer)
-                    .font(.system(size: 12, weight: .bold, design: .monospaced))
-                    .foregroundColor(.white.opacity(0.8))
-                    .monospacedDigit()
-                    .frame(maxWidth: 44)
+                HStack(spacing: 0) {
+                    Text(context.state.hourStart, format: .dateTime.hour(.twoDigits(amPM: .omitted)))
+                        .font(.system(size: 12, weight: .bold, design: .monospaced))
+                        .foregroundColor(.white.opacity(0.8))
+                    Text(":")
+                        .font(.system(size: 12, weight: .bold, design: .monospaced))
+                        .foregroundColor(.white.opacity(0.8))
+                    Text(timerInterval: context.state.hourStart...context.state.hourStart.addingTimeInterval(3600), countsDown: false)
+                        .font(.system(size: 12, weight: .bold, design: .monospaced))
+                        .foregroundColor(.white.opacity(0.8))
+                        .monospacedDigit()
+                }
+                .frame(maxWidth: 80)
             } minimal: {
                 Image(systemName: "clock.fill")
                     .font(.system(size: 12))
