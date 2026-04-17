@@ -52,7 +52,8 @@ struct ChronoIslandApp: App {
 
         let now = Date()
         let hourStart = Calendar.current.dateInterval(of: .hour, for: now)!.start
-        let state = ClockActivityAttributes.ContentState(date: now, hourStart: hourStart)
+        let minuteStart = Calendar.current.dateInterval(of: .minute, for: now)!.start
+        let state = ClockActivityAttributes.ContentState(date: now, hourStart: hourStart, minuteStart: minuteStart)
         let content = ActivityContent(state: state, staleDate: nil)
 
         Task {

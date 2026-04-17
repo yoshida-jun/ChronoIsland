@@ -12,5 +12,6 @@ struct ClockActivityAttributes: ActivityAttributes {
     struct ContentState: Codable, Hashable {
         var date: Date
         var hourStart: Date
+        var minuteStart: Date
     }
 }
